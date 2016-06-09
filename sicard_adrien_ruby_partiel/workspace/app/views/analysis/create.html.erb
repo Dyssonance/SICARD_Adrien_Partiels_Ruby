@@ -1,0 +1,9 @@
+<%= form_for video_game.create do |form| %>
+  <fieldset>
+    <%= form.text_field :title %>
+    <%= form.text_field :release_date %>
+    <%= form.text_field :image_url %>
+  </fieldset>
+
+  <%= form.submit %>
+<% end %>

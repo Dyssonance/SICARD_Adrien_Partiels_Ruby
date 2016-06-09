@@ -1,0 +1,9 @@
+<%= form_for analysis.create do |form| %>
+  <fieldset>
+    <%= form.text_field :user_name %>
+    <%= form.text_field :email %>
+    <%= form.text_field :critic %>
+  </fieldset>
+
+  <%= form.submit %>
+<% end %>

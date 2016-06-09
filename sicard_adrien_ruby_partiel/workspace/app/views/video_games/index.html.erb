@@ -1,0 +1,26 @@
+<% if @video_game.any? %>
+  <ul>
+  <% @video_game.each do |video_game| %>
+    <li>
+      <span class="video_game-title">
+        <%= video_game.title %>
+      </span>
+    </li>
+    <li>
+      <span class="video_game-release_date">
+        <%= video_game.release_date %>
+      </span>
+    </li>
+    <li>
+      <span class="video_game-image_url">
+        <%= video_game.image_url %>
+      </span>
+    </li>
+  <% end %>
+  </ul>
+<% else %>
+  <p>
+    Aucune analyse n'existe. Voulez-vous être le premier à en créer un ?
+  </p>
+  <%= link to create_vide_game_path do %>Nouveau jeu<% end %>
+<% end %>

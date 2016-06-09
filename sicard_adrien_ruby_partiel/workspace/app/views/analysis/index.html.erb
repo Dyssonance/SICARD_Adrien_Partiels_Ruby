@@ -1,0 +1,26 @@
+<% if @analysis.any? %>
+  <ul>
+  <% @analysis.each do |analysis| %>
+    <li>
+      <span class="analysis-user_name">
+        <%= analysis.user_name %>
+      </span>
+    </li>
+    <li>
+      <span class="analysis-email">
+        <%= analysis.email %>
+      </span>
+    </li>
+    <li>
+      <span class="analysis-critic">
+        <%= analysis.critic %>
+      </span>
+    </li>
+  <% end %>
+  </ul>
+<% else %>
+  <p>
+    Aucune analyse n'existe. Voulez-vous être le premier à en créer une ?
+  </p>
+  <%= link to create_analysis_path do %>Nouvelle critique<% end %>
+<% end %>
